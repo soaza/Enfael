@@ -3,7 +3,7 @@ from firebase import firebase
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, \
     PicklePersistence)
 
-BCtoken = '1192172658:AAF3I7jtSUySlqSBH5b0kYOiplLmzgwZqqA'
+BCtoken = 'INSERT BOT TOKEN HERE'
 firebase = firebase.FirebaseApplication("https://orbital-2020.firebaseio.com/",None)
 
 
@@ -121,10 +121,6 @@ def main():
     #upload the data to firebase
 
 
-
-    # Run the bot until you press Ctrl-C or the process receives SIGINT,
-    # SIGTERM or SIGABRT. This should be used most of the time, since
-    # start_polling() is non-blocking and will stop the bot gracefully.
     updater.idle()
 
 if __name__=='__main__':
