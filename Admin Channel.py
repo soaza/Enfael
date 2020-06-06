@@ -1,18 +1,13 @@
 from telegram import ReplyKeyboardMarkup
-from firebase import firebase
-from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, \
-    PicklePersistence)
-
-from telegram import ReplyKeyboardMarkup
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, PicklePersistence)
  
-BCtoken = 'INSERT BOT TOKEN HERE'
+BCtoken = '1192172658:AAF3I7jtSUySlqSBH5b0kYOiplLmzgwZqqA'
  
 # To enable logging
 import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
- 
+
 # Welcome message with a list of commands
 def start(update, context):
     update.message.reply_text('Hello! I am the NUS Blind Cupid Bot! ' \
@@ -131,7 +126,7 @@ def main():
     # Start the bot
     updater.start_polling()
  
-    # Run the bot  to stop the Bot by pressing Ctrl+C or sending a signal to the Bot process
+    # To stop the Bot by pressing Ctrl+C or sending a signal to the Bot process
     updater.idle()
  
 if __name__=='__main__':
