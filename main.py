@@ -304,7 +304,7 @@ def main():
 
 
     # Intialisation
-    botToken = '1192172658:AAF3I7jtSUySlqSBH5b0kYOiplLmzgwZqqA'
+    botToken = 'INSERT BOT TOKEN HERE'
     db = Database()
     updater = Updater(botToken, use_context=True)
     dp = updater.dispatcher
