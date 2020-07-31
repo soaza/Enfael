@@ -1,0 +1,110 @@
+# USERNAME COMMAND
+register: Oopsie! You need to register a Telegram username before using me! Type /start to try again after your registration.
+
+# START COMMAND
+start: 
+  "Welcome! I am the NUS Cupid Bot! I can help you set up a profile for you to find your ideal match and engage in a secret chat! 
+  \n\nYou can control me by sending me these commands. \n\n/setup - setup or edit your profile\n/profile - view your current profile
+  \n/criteria - set your partner criteria\n/match - start looking for profiles \n/partner - view your partner profile
+  \n/message - message your partner\n/exchange - exchange your username\n/remove - remove your current partner
+  \n/delete - delete your profile\n/help - view all commands"
+firstTime: First time eh? Allow me to assist you in setting up your profile with /setup!
+
+# HELP COMMAND
+help: 
+  "Need help? Here is the full list of commands that I can help you out with!
+  \n\n/start - initialise the NUSCupidBot\n/setup - setup or edit your profile
+  \n/profile - view your current profile\n/criteria - set your partner criteria
+  \n/match - start looking for profiles\n/partner - view your partner profile
+  \n/message - message your partner\n\n/exchange - exchange your username
+  \n/remove - remove your current partner\n/delete - delete your profile"
+
+# CONVERSATION PART 1 - SETUP COMMAND
+setup: Tell me some information about yourself.
+setupSTD: Nice! what else would you like to share?
+userGender: Your gender? Yes I would love to hear about that!
+userAge: Your age? Yes I would love to hear about that!
+userRemove: Which piece of information would you like to remove?
+userRemovedPass: Ok, trait removed!
+userRemoveFail: Seems like your indicated trait is already empty! So nothing was removed!
+userTopicInvalid:
+  "Invalid input. Please indicate a topic from 'Gender', 'Age', 'Height', 
+  'Weight', 'Appearance', 'Year', 'Major', 'Faculty', 'Trait 1', 'Trait 2', 'Ideal Match', 'Remove', and 'Done'."
+userGenderInvalid: Invalid input. Please indicate either 'Male' or 'Female'.
+userAgeInvalid: Invalid input. Please return an integer from 18 to 100.
+userRemoveInvalid: 
+  "Invalid input. Please indicate an appropriate topic from 'Gender', 'Age', 'Height', 
+  'Weight', 'Appearance', 'Year', 'Major', 'Faculty', 'Trait 1', 'Trait 2', and 'Ideal Match'."
+noCriteria: Please tell me some information about your ideal match.
+criteriaSTD: Interesting! what else would you like to share?'
+pTopicInvalid: 
+  "Invalid input. Please indicate an appropriate topic from 'Partner Gender', 'Minimum Age', 
+  'Maximum Age', and 'Done'."
+pGenderInvalid: Invalid input. Please indicate either 'Male', 'Female', or 'Both'.
+pAgeInvalid: Invalid input. Please return an integer from 18 to 100
+pAgeMinInvalid: Invalid input. Please return an integer smaller than your criteria for your ideal partner maximum age.
+pAgeMaxInvalid: Invalid input. Please return an integer larger than your criteria for your ideal partner minimum age.
+
+# CONVERSATION PART 3 - MATCH COMMAND
+mSetupInvalid: Your current profile is incomplete! Please ensure that your 'Gender' and 'Age' are filled up using /setup.
+mPartnerInvalid: Your partner criteria setup is incomplete! Please fill up your ideal match criteria with /criteria.
+mExchangeInvalid: Seems like you have an expired match! You can either initiate an exchange using /exchange or remove your current partner using /remove.
+mNoPartner: You ran out of profile! You can either expand your partner criteria or try again in a few days time.
+mDislike: Don't like? No problem, let me help you find more profiles!
+mLikeUser: "Congratulation you got a match!\n\nYour 7 days countdown starts now. Waste no time and message your partner using /message!\n\nAlso, good luck and have fun! :)"
+mLikePartner: "Congratulation you got a match!\n\nYour 7 days countdown starts now. View your partner profile using /partner or message them using /message!\n\nGood luck and have fun! :)"
+mInvalid: Invalid input. Please indicate 'Like', 'Dislike', or 'Done'.
+mDone: The NUS Cupid bot has stop searching for matches.
+
+# CONVERSATION PART 4 - MESSAGE COMMAND
+meNoMatch: You currently don't have a partner. Start looking for matches using /match.
+meExpiredMatch: You currently have an expired match. You can either initiate an exchange using /exchange or remove your current partner using /remove.
+meMatchPass: Please type your message for your partner.
+meNoPoll: Sorry but polling is unsupported in this bot. :(
+meInvalid: Sorry but what you send is not supported by this bot. :(
+mePass: Message successfully sent! Type 'Exit' if you wish to exit your conversation.
+meExit: You have successfully exit your conversation with your partner.
+
+# CONVERSATION PART 5 - ELIMINATION (REMOVE & DELETE) COMMAND
+reCfmExp: 
+  "\nAre you sure you want to remove your expired match? 
+  This will enable you to look for new profiles using /match. 
+  Alternatively, you can intiate to exchange telegram username using /exchange."
+reCfm:
+  "\nAre you sure you want to remove your current partner? This will enable you to look for new profiles using /match."
+reUserPass: You have successfully removed your partner. Type /match to start searching for matches again.
+rePartnerPass: Sorry but your partner have decided to unmatch you. You can start finding new profiles using /match.
+reFail: No problem! Give your partner one more chance before letting go!
+reInvalid: Invalid input. Please indicate either 'Yes' or 'No'.
+deCfm: Are you sure you want to delete your profile?
+dePartnerPass: Sorry but your partner has deleted their profile. You can start finding new profiles using /match.
+deUserPass:  Profile successfully removed from the NUS Cupid Bot. Sorry to see you go and I do hope to see you again!!! :(
+deFail: Thank you for not letting me go!!! :)
+deInvalid: Invalid input. Please indicate either 'Yes' or 'No'.
+
+# COUNTDOWN
+cd: 
+  "Your time with your partner is up.\n\nBoth of you can no longer exchange messages with each other. 
+  However, you can continue to exchange your telegram username with each other using /exchange or remove them using /remove."
+
+# CONVERSATION PART 6 - EXCHANGE COMMAND
+exCfm: 
+  "\nAre you sure you want to exchange username with your partner? 
+  \n\nIf your partner agrees, this will enable you to reveal each other telegram username but you can no longer converse with each other."
+exPass: Congratulations, both of you agree to exchange usernames. Hence, your partner telegram username is...
+exUserWait: Seems like your partner has not responded to the exchange. Please wait a while more as I help you ask them.
+exPartnerWait: Your partner has intiated an exchange of telegram usernames. You can respond using /exchange.
+exUserFail: Not suitable? No problem! Hope you find a better match next time. :)
+exPartnerFail: Sorry but your partner has decline to exchange their telegram username.. Better luck next time! :)
+exInvalid: Invalid input. Please indicate 'Accept', 'Reject', or 'Cancel'.
+exExpCancel: It appears that you have an expired match. Do make a decision using /exchange or /remove!
+exCancel: No problem. Do engage your partner more using /message.
+
+# STANDARD CHECK
+noProfile: Oops! You currently don't not have a profile. Type /setup to setup a new profile with me now!
+noPartner: You currently don't have a partner. Start looking for a partner using /match.
+gotPartner: "\nSorry but you currently have a partner. Type /message to text your partner or type /remove to remove your current partner."
+
+# EASTER EGGS
+CG: Moi ish coolie
+KG: How You Doin?
